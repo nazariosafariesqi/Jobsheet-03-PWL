@@ -30,4 +30,3 @@ Route::get('/articles/{$id}', function ($id) {
 Route::get('/', 'HomeController@index');
 Route::get('/about', 'AboutController@about');
 Route::get('/articles', 'ArticlesController@articles');
-
