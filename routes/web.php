@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Contracts\Container\BindingResolutionException;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
-    return view('welcome');
+    echo "Selamat Datang";
 });
+
+Route::get('/about', function () {
+    echo "1941720233 , Nazario Safariesqi Tyo Widjaya , TI2A";
+});
+
+Route::get('/articles/{$id}', function ($id) {
+    return "Halaman Artikel dengan ID ".$id;
+});
+
+Route::get('/', 'HomeController@index');
+Route::get('/about', 'AboutController@about');
+Route::get('/articles', 'ArticlesController@articles');
