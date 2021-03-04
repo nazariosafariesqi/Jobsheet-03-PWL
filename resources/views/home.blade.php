@@ -1,5 +1,4 @@
 @extends('layouts.app')
-
 @section('content')
 Ini adalah content page
 <div class="container">
